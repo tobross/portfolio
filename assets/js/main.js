@@ -1,3 +1,4 @@
+$(document).ready(function(){
 $(".buttons").mouseover(function(){
     $(this).addClass("animated jello");
   });
@@ -29,7 +30,7 @@ $(".buttons").mouseover(function(){
   
   }
   
-  $("#arrow, .name").on("click", function() {
+  $(".name").on("click touchstart", function() {
     open.play();
     about.play();
   
@@ -86,3 +87,4 @@ $(".buttons").mouseover(function(){
     }],
     delay: 200
   });
+});
