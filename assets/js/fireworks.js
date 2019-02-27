@@ -6,7 +6,7 @@ var numberOfParticules = 30;
 var pointerX = 0;
 var pointerY = 0;
 var tap = ('ontouchstart' in window || navigator.msMaxTouchPoints) ? 'touchstart' : 'mousedown';
-var colors = ['rebeccapurple', '#18FF92', '#5A87FF', '#FBF38C'];
+var colors = ["#bbfff", "#92d3fc", "#6895fa", "#1c8a8d"];
 
 function setCanvasSize() {
   canvasEl.width = window.innerWidth * 2;
@@ -22,8 +22,8 @@ function updateCoords(e) {
 }
 
 function setParticuleDirection(p) {
-  var angle = anime.random(0, 360) * Math.PI / 180;
-  var value = anime.random(50, 180);
+  var angle = anime.random(50, 360) * Math.PI / 180;
+  var value = anime.random(50, 480);
   var radius = [-1, 1][anime.random(0, 1)] * value;
   return {
     x: p.x + radius * Math.cos(angle),
